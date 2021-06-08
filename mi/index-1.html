@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一级页面背景动画渐变</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* 原理 */
+        /* 1.设置背景渐变色 */
+        /* 2.声明背景动画 */
+        /* 3.调用动画 谁做动画给谁加 */
+        
+        body {
+            /* vh是c3属性 意思就是和屏幕的高度一致 */
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background-image: linear-gradient(123deg, #f44336, #e91e63, #9c27b0, #3f51b5, #2196f3);
+            background-size: 400%;
+            font-family: "montserrat";
+            animation: bganimation 15s infinite;
+        }
+        
+        .index {
+            margin: 0 auto;
+            background-color: #fff;
+            width: 50px;
+            height: 25px;
+        }
+        
+        .text {
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            margin: 350px auto;
+        }
+        
+        a {
+            margin: 0 auto;
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            /* background: #f67000; */
+            border-radius: 3px;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        @keyframes bganimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        Hello World
+        <br>
+        <a href="./index-2.html">点我进入主页</a>
+    </div>
+
+</body>
+
+</html>
